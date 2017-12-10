@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="io.demo.tfandroid.MainActivity">
+
+
+    <EditText
+        android:id="@+id/valA"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1" />
+
+    <EditText
+        android:id="@+id/valB"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/valA"
+        android:layout_alignBottom="@+id/valA"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="2" />
+
+    <TextView
+        android:id="@+id/resultAB"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/valB"
+        android:layout_alignBottom="@+id/valB"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/valB"
+        android:ems="10"
+        android:text="Output"
+        android:textSize="24sp" />
+
+    <Button
+    android:text="Add"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/button"
+    android:layout_below="@+id/valB"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp" />
+
+</RelativeLayout>
