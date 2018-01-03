@@ -18,7 +18,8 @@ public class MNISTActivity extends AppCompatActivity implements View.OnTouchList
 
     private static final String TAG = "MNISTActivity";
     private static final int PIXEL_WIDTH = 28;
-    private TextView mResultText;
+    private TextView mResultTextMnist;
+    private TextView mResultTextConvnet;
     private float mLastX;
     private float mLastY;
     private DrawModel mModel;
@@ -26,8 +27,10 @@ public class MNISTActivity extends AppCompatActivity implements View.OnTouchList
     private PointF mTmpPiont = new PointF();
 
     // Tensorflow related code
-    private TensorFlowInferenceInterface inferenceInterface;
-    private static final String MODEL_FILE = "file:///android_asset/_frozen_mnistTFonAndroid.pb";
+    private TensorFlowInferenceInterface inferenceInterface_mnist;
+    private TensorFlowInferenceInterface inferenceInterface_convnet;
+    private static final String MODEL_FILE_MNIST = "file:///android_asset/_frozen_mnistTFonAndroid.pb";
+    private static final String MODEL_FILE_CONVNET = "file:///android_asset/_frozen_convnetTFonAndroid.pb";
     private static final String[] INPUT_NODES = {"modelInput"};
     private static final String[] OUTPUT_NODES = {"modelOutput"};
     private static final int[] INPUT_DIM = {1, PIXEL_WIDTH*PIXEL_WIDTH};
@@ -38,7 +41,8 @@ public class MNISTActivity extends AppCompatActivity implements View.OnTouchList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mnist);
 
-        inferenceInterface = new TensorFlowInferenceInterface(getAssets(), MODEL_FILE);
+        inferenceInterface_mnist = new TensorFlowInferenceInterface(getAssets(), MODEL_FILE_MNIST);
+        inferenceInterface_convnet = new TensorFlowInferenceInterface(getAssets(), MODEL_FILE_CONVNET);
 
         mModel = new DrawModel(PIXEL_WIDTH, PIXEL_WIDTH);
         mDrawView = (DrawView)findViewById(R.id.view_draw);
@@ -61,7 +65,8 @@ public class MNISTActivity extends AppCompatActivity implements View.OnTouchList
             }
         });
 
-        mResultText = (TextView)findViewById(R.id.text_result);
+        mResultTextMnist = (TextView)findViewById(R.id.text_result_mnist);
+        mResultTextConvnet = (TextView)findViewById(R.id.text_result_convnet);
     }
 
     @Override
@@ -126,32 +131,45 @@ public class MNISTActivity extends AppCompatActivity implements View.OnTouchList
 
         float pixels[] = mDrawView.getPixelData();
         String[] labels = new String[]{"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
-        float[] modelOutput = new float[labels.length];
+        float[] modelOutputMnist = new float[labels.length];
+        float[] modelOutputConvnet = new float[labels.length];
 
         // Feed in the values
-        inferenceInterface.feed(INPUT_NODES[0],pixels,INPUT_DIM[0], INPUT_DIM[1]);
+        inferenceInterface_mnist.feed(INPUT_NODES[0],pixels,INPUT_DIM[0], INPUT_DIM[1]);
+        inferenceInterface_convnet.feed(INPUT_NODES[0],pixels,INPUT_DIM[0], INPUT_DIM[1]);
 
         // Run a session over the fed in data
-        inferenceInterface.run(OUTPUT_NODES);
+        inferenceInterface_mnist.run(OUTPUT_NODES);
+        inferenceInterface_convnet.run(OUTPUT_NODES);
 
         // Fetch the result at output node
-        inferenceInterface.fetch(OUTPUT_NODES[0], modelOutput);
+        inferenceInterface_mnist.fetch(OUTPUT_NODES[0], modelOutputMnist);
+        inferenceInterface_convnet.fetch(OUTPUT_NODES[0], modelOutputConvnet);
 
-        int index = 0;
+        int indexMnist = 0;
+        int indexConvnet = 0;
         for (int i=0; i<10; i++){
-            Log.i(TAG,""+modelOutput[i]);
-            if (modelOutput[i] > modelOutput[index]){
-                index=i;
+            Log.i(TAG,""+modelOutputMnist[i]);
+            if (modelOutputMnist[i] > modelOutputMnist[indexMnist]){
+                indexMnist=i;
+            }
+            Log.i(TAG,""+modelOutputConvnet[i]);
+            if (modelOutputConvnet[i] > modelOutputConvnet[indexConvnet]){
+                indexConvnet=i;
             }
         }
-        Log.i(TAG, "digit =" + index);
-        mResultText.setText("Detected = " + labels[index]);
+        Log.i(TAG, "Softmax model says digit is " + indexMnist);
+        Log.i(TAG, "Convnet model says digit is " + indexConvnet);
+        mResultTextMnist.setText("softmax : " + labels[indexMnist]);
+        mResultTextConvnet.setText("convnet : " + labels[indexConvnet]);
     }
 
     private void onClearClicked() {
         mModel.clear();
         mDrawView.reset();
         mDrawView.invalidate();
-        mResultText.setText("");
+        mResultTextMnist.setText("");
+        mResultTextConvnet.setText("");
+
     }
 }

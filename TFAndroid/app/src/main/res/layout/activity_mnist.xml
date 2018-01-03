@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="io.demo.tfandroid.MNISTActivity">
 
     <io.demo.tfandroid.mnistui.DrawView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/view_draw"
         android:layout_weight="1"/>
 
@@ -22,25 +21,37 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <Button
+            android:layout_gravity="top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Clear"
             android:id="@+id/button_clear"/>
 
         <Button
+            android:layout_gravity="top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detect"
             android:id="@+id/button_detect"/>
 
         <TextView
-            android:paddingLeft="10dp"
+            android:layout_gravity="top"
+            android:paddingLeft="2dp"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text=""
-            android:id="@+id/text_result"/>
+            android:id="@+id/text_result_mnist"/>
+        <TextView
+            android:layout_gravity="top"
+            android:paddingLeft="2dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/text_result_convnet"/>
     </LinearLayout>
 </LinearLayout>
 

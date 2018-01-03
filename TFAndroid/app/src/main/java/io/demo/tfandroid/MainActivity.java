@@ -11,7 +11,7 @@ import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String MODEL_FILE = "file:///android_asset/_frozen_basicTFonAndroid.pb";
+    private static final String MODEL_FILE = "file:///android_asset/_basicTFonAndroid.pb";
     private static final String[] INPUT_NODES = {"modelInputA","modelInputB"};
     private static final String[] OUTPUT_NODES = {"modelOutputAB"};
     private static final int[] INPUT_DIM = {1};
