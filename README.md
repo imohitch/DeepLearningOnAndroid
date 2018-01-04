@@ -8,5 +8,3 @@ dependencies {
     compile 'org.tensorflow:tensorflow-android:+'
 }
 ```
-
-:smiley:
