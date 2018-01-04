@@ -11,8 +11,8 @@ Tutorials are created as jupyter notebooks so that instead of just reading or ju
 ***This series of tutorials cover not just how to deploy a model on android but assumes a reader to have no understanding of deep learning, android development and minimum coding experience.***
 
 >Above said, this repo requires a reader to just know 
-* how to run a jupyter notebook 
-* deploy an android app on a device using android studio.
+>* how to run a jupyter notebook 
+>* deploy an android app on a device using android studio.
 
 **Yes, no coding required!** (All non-coders cheers!!)
 
