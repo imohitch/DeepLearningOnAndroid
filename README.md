@@ -1,7 +1,7 @@
 # DeepLearningOnAndroid 
 
 My First attempt at writing an article, really excited :smiley:. Check out the article accompanying this repository.
- * [article link](http://www.google.com)
+ * [article link not working yet](http://www.google.com)
 
 This repository contains the material for deploying deep learning models on mobile and embedded platforms. I plan to make this a one stop tutorial to deploy any kind of Neural Network developed on any framework like Tensorflow, Pytorch, CNTK etc.
 
