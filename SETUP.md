@@ -18,7 +18,7 @@ pip install --upgrade jupyter
 import tensorflow as tf
 print(tf.__version__)
 ```
-- run this command in terminal to check jupyter notebook. To shutdown press CTRL+Z 2 times.
+- run this command in terminal to check jupyter notebook. To shutdown notebook press CTRL+Z 2 times.
 ```shell
 jupyter notebook
 ```
@@ -52,8 +52,6 @@ dependencies {
 
 ```
 
-```
-```
 Also pay attention to your android manifest file which should look something like this. We have two activities ***.MAINActivity*** and ***.MNISTActivity*** registered as launcher activity.
 
 ![Image 5](images/as_6_main_activity.png)
@@ -62,12 +60,12 @@ Also pay attention to your android manifest file which should look something lik
 
 ### Check both apps
 Now we can run the app and see it running on a phone. If .MAINActivity entry is above the .MNISTActivity you will see this page open when you run the app
-<img src="images/tf_1_add.jpeg" alt="Drawing" style="width: 200px;"/>
+![Image 6](images/tf_1_add_small.jpg)
 
 or this page if .MNSTActivity is above
-<img src="images/tf_2_mnist.jpeg" alt="Drawing" style="width: 200px;"/>
+![Image 7](images/tf_2_mnist_small.jpg)
 
-try running both apps but switching positions of the activities entries there
+try running both apps by switching positions of the activities entries there
 
 
 ## 3.Overview of Java code in app
