@@ -18,14 +18,14 @@ pip install --upgrade jupyter
 import tensorflow as tf
 print(tf.__version__)
 ```
-- run this command in terminal to check jupyter notebook. To shutdown notebook press CTRL+Z 2 times.
+- run this command in terminal to check jupyter notebook. To shutdown notebook press **CTRL+c** 2 times.
 ```shell
 jupyter notebook
 ```
  
 
 ## 2.Running the provided "ready to run" app
-After python is setup we need to check if our android environment is ready to deploy the models we will be training. I have provided a complete android app with 3 tensorflow models preinstalled in app. We will run our app to see them in action and later replace them with models we will be training
+After python is setup we need to check if our android environment is ready to deploy the models we will be training. I have provided a complete android app with 3 tensorflow models preinstalled in app. We will run the app to see them in action and later replace provided models with models we will be training.
 
 ### Install android studio
 * https://developer.android.com/studio/install.html
@@ -33,7 +33,7 @@ After python is setup we need to check if our android environment is ready to de
 ### Open TFAnroid app in android studio 
 This should be fairly simple, if no please refer the video.
 ### Common errors and warning at first run
-When opening the Android project for first time you may encounter error and warning like these in images below, to resolve them simply **click install or upgrade** which ever is ppropriate. This may do some one time heavy downloads, which **can take some time to complete.**
+When opening the Android project for first time you may encounter error and warning like these in images below, to resolve them simply **click install or upgrade** which ever is appropriate. This may do some one time heavy downloads, which **can take some time to complete.**
 
 ![Image 1](images/as_1_missing_platform.png)
 ![Image 2](images/as_2_build_tool.png)
@@ -59,7 +59,7 @@ Also pay attention to your android manifest file which should look something lik
 
 
 ### Check both apps
-Now we can run the app and see it running on a phone. If .MAINActivity entry is above the .MNISTActivity you will see this page open when you run the app
+Now we can run the app and see it running on a phone. If **.MAINActivity** entry is above the **.MNISTActivity** you will see this page open when you run the app
 ![Image 6](images/tf_1_add_small.jpg)
 
 or this page if .MNSTActivity is above
