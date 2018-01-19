@@ -47,7 +47,7 @@ To add deep learning capabilities to your any android app, just add this gradle 
 
 ```gradle
 dependencies {
-    compile 'org.tensorflow:tensorflow-android:+'
+    compile 'org.tensorflow:tensorflow-android:1.4.0'
 }
 
 ```
