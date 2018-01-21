@@ -45,15 +45,6 @@ Prerequisities are
 
 ***Check SETUP.md to complete your prerequisites***
 
-
-
-## Tutorial 0 - Overview of Deep Learning and Tensorflow
-This notebook covers
->* Background for deep learning
->* What are neural networks, nodes, dataset etc
->* What is tensorflow 
->* Concept of graph and session in tensorflow
-
 ## Tutorial 1 - Deploying a simple tensorflow model on Android
 This notebook covers
 >* Different type of nodes in tensorflow graph
