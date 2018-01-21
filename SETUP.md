@@ -28,7 +28,7 @@ After python is setup we need to check if our android environment is ready to de
 * https://developer.android.com/studio/install.html
 
 ### Open TFAnroid app in android studio 
-This should be fairly simple, if no please refer the video.
+This should be fairly simple.
 ### Common errors and warning at first run
 When opening the Android project for first time you may encounter error and warning like these in images below, to resolve them simply **click install or upgrade** which ever is appropriate. This may do some one time heavy downloads, which **can take some time to complete.**
 
@@ -63,9 +63,3 @@ or this page if .MNSTActivity is above
 ![Image 7](images/tf_2_mnist_small.jpg)
 
 **try running both apps by switching positions of the activities entries there. Else you will have two apps installed with name TF-MNIST and TF-BASIC, run from there. You may need to kill the first app before opening second app.**
-
-
-## 3.Overview of Java code in app
-
-- part of code you should care about
-- explaination of tensorflow related code
