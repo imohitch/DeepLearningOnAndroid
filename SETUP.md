@@ -1,5 +1,3 @@
-##### If you do not understand any step or feel lost kindly refer to video
-
 ## 1.Setup python environment
 To use this repo first you need to setup a python environment with tensorflow and jupyter notebook dependency
 ### Install anaconda (or virtuaenv perhaps)
@@ -18,11 +16,10 @@ pip install --upgrade jupyter
 import tensorflow as tf
 print(tf.__version__)
 ```
-- run this command in terminal to check jupyter notebook. To shutdown notebook press **CTRL+c** 2 times.
+- run this command in terminal to check jupyter notebook. To shutdown notebook press **CTRL+C** 2 times.
 ```shell
 jupyter notebook
 ```
- 
 
 ## 2.Running the provided "ready to run" app
 After python is setup we need to check if our android environment is ready to deploy the models we will be training. I have provided a complete android app with 3 tensorflow models preinstalled in app. We will run the app to see them in action and later replace provided models with models we will be training.
@@ -52,7 +49,7 @@ dependencies {
 
 ```
 
-Also pay attention to your android manifest file which should look something like this. We have two activities ***.MAINActivity*** and ***.MNISTActivity*** registered as launcher activity.
+Pay attention to your android manifest file which should look something like this. We have two activities ***.MAINActivity*** and ***.MNISTActivity*** registered as launcher activity.
 
 ![Image 5](images/as_6_main_activity.png)
 
@@ -65,7 +62,7 @@ Now we can run the app and see it running on a phone. If **.MAINActivity** entry
 or this page if .MNSTActivity is above
 ![Image 7](images/tf_2_mnist_small.jpg)
 
-try running both apps by switching positions of the activities entries there
+**try running both apps by switching positions of the activities entries there. Else you will have two apps installed with name TF-MNIST and TF-BASIC, run from there. You may need to kill the first app before opening second app.**
 
 
 ## 3.Overview of Java code in app
