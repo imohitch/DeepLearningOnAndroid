@@ -62,4 +62,4 @@ Now we can run the app and see it running on a phone. If **.MAINActivity** entry
 or this page if .MNSTActivity is above
 ![Image 7](images/tf_2_mnist_small.jpg)
 
-**try running both apps by switching positions of the activities entries there. Else you will have two apps installed with name TF-MNIST and TF-BASIC, run from there. You may need to kill the first app before opening second app.**
+**try both apps by switching positions of the activities entries there, simple addition in first app and draw and detect of single digits is second app. Else you will have two apps installed with name TF-MNIST and TF-BASIC, run from there. You may need to kill the first app before opening second app.**
