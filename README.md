@@ -45,7 +45,7 @@ Prerequisities are
 
 ***Check SETUP.md to complete your prerequisites***
 
-## Tutorial 1 - Deploying a simple tensorflow model on Android
+## Tutorial 1 - Deploying a simple single node tensorflow model on Android
 This notebook covers
 >* Different type of nodes in tensorflow graph
 >* Creating a single variable model in tensorflow
