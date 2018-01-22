@@ -24,17 +24,6 @@ Tutorials are created as jupyter notebooks so that instead of just reading or ju
 
 **Yes, no coding required!** (All non-coders cheers!!). All the code is already in place so that you can focus on concepts you want to understand.
 
-
-
-## Overview
-(This section is boring, you can skip :D )
-
-This repository provides to the point tutorials for deploying any type of deep learning models created on any deep learning framework on mobile platform ( Tensorflow models on Android devices as of now ). **Most of the articles currently available online mostly give steps followed by the authors to deploy, without providing sufficient explaination why it is being done and what is happening behind the scenes. This creates problem when we have to deploy a new model with different Inputs and Outputs.**
-
-To ensure readers have a thorough understanding of what they are doing I will be covering fundamentals of Tensorflow architecture and its fundamentals a deep learner (:p) should know.
-
-
-
 ## Prerequisites
 Prerequisities are 
 >1.Python environment with following installed
