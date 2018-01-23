@@ -49,3 +49,4 @@ This notebook covers
 ## Tutorial 3a - Deploying a convnet tensorflow model for MNIST
 This notebook covers
 >* Deploying a convolutional network to get superior results
+>* Using exponentially decaying Learning Rate to learn faster
