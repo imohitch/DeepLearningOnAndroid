@@ -15,7 +15,7 @@ Tutorials are created as jupyter notebooks so that instead of just reading or ju
 >* has some or no coding experience
 
 
-***This series of tutorials cover not just how to deploy a model on android but assumes a reader to have no understanding of deep learning, android development and minimum coding experience.***
+***This series of tutorials cover not just how to deploy a model on android but assumes a reader to have no understanding of deep learning, android development and asks for minimum coding experience.***
 
 >Above said, this repo requires a reader to just know 
 >* how to run a jupyter notebook 
@@ -30,6 +30,8 @@ Prerequisities are
 >* Tensorflow 1.3 or greater
 >* Jupyter notebook
 
+**(avoid using the dependency version beyond 1.4.1 as they are compiled with jdk1.8 causing issues in android app)**
+
 >2.Android Studio
 
 ***Check SETUP.md to complete your prerequisites***
@@ -43,8 +45,8 @@ This notebook covers
 ## Tutorial 2 - Deploying a softmax tensorflow model for MNIST
 This notebook covers
 >* Creating a softmax model for MNIST digits problem
->* Exporting it using the freeze API provided by tensorflow
->* Running MNIST digits recognizer on android and deploying out trained softmax model
+>* Export it using the freeze API provided by tensorflow
+>* Running MNIST digit recognizer on android and deploying our trained softmax model
 
 ## Tutorial 3a - Deploying a convnet tensorflow model for MNIST
 This notebook covers

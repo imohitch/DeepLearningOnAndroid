@@ -7,11 +7,11 @@ My prefered python environment manager is Anaconda
 ### Install tensorflow and jupyter
 After you have activated your python environment
 ```shell
-pip install --upgrade tensorflow    # cpu version
+pip install --upgrade tensorflow==1.4.1   # cpu version
 pip install --upgrade jupyter 
 ```
 ### Test tensorflow and jupyter
-- run these commands in python terminal to check tensorflow
+- run these commands in python shell to check tensorflow
 ```python
 import tensorflow as tf
 print(tf.__version__)
@@ -22,7 +22,7 @@ jupyter notebook
 ```
 
 ## 2.Running the provided "ready to run" app
-After python is setup we need to check if our android environment is ready to deploy the models we will be training. I have provided a complete android app with 3 tensorflow models preinstalled in app. We will run the app to see them in action and later replace provided models with models we will be training.
+After python is setup we need to check if our android environment is ready to deploy the models we will be training. I have provided a complete android app with 3 tensorflow models preinstalled. We will run the app to see them in action and later replace provided models with models we will be training.
 
 ### Install android studio
 * https://developer.android.com/studio/install.html
@@ -40,11 +40,11 @@ When opening the Android project for first time you may encounter error and warn
 ### Run app on an android device -> add tensorflow dependency and sync
 Pay attention to this section. In most existing tutorials online, authors ask you to add native tensorflow libs and use java JNI interface to bring tensorflow superpowers to your android app. **This is totally not required.**
 
-To add deep learning capabilities to your any android app, just add this gradle dependency into ***build.gradle*** of your app. Thats it. Everything else will be automatically handled. **There is no need to downloads native libs and .so files , manually add them to your project or use JNI interface (unles you really wish to show off your c++ capabilities).**
+To add deep learning capabilities to your any android app, just add this gradle dependency into ***build.gradle*** of your app. Thats it. Everything else will be automatically handled. **There is no need to download native libs and .so files , manually add them to your project or use JNI interface (unles you really wish to show off your c++ mastery).**
 
 ```gradle
 dependencies {
-    compile 'org.tensorflow:tensorflow-android:1.4.0'
+    compile 'org.tensorflow:tensorflow-android:1.4.1'
 }
 
 ```
@@ -62,4 +62,4 @@ Now we can run the app and see it running on a phone. If **.MAINActivity** entry
 or this page if .MNSTActivity is above
 ![Image 7](images/tf_2_mnist_small.jpg)
 
-**try both apps by switching positions of the activities entries there, simple addition in first app and draw and detect of single digits is second app. Else you will have two apps installed with name TF-MNIST and TF-BASIC, run from there. You may need to kill the first app before opening second app.**
+**Try running both apps by switching positions of the activities entries there. Else you will have two apps installed with name TF-MNIST and TF-BASIC, run from there. You may need to kill the first app before opening second app.**
