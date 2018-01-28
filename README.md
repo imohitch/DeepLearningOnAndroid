@@ -2,7 +2,7 @@
 # DeepLearningOnAndroid 
 
 My First attempt at writing an article, really excited :smiley:. Check out the article accompanying this repository.
- * [article link not working yet](http://www.google.com)
+ * [Running Tensorflow models on Android](https://www.linkedin.com/pulse/running-tensorflow-models-android-explaining-basics-behind-chaudhary/)
 
 This repository contains the material for deploying deep learning models on mobile and embedded platforms like Raspberry pi. I plan to make this a one stop tutorial series to deploy any kind of Neural Network developed on any framework like Tensorflow, Pytorch, CNTK etc.
 
